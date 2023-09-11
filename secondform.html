@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FootStats</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" initial-scale="1">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="img/sliderIcon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+
+  
+</head>
+
+<body>
+  <h1 class="headstyle">FootStats</h1>
+
+  <form>
+  <div class="entireDisplay">
+  <div class="topContainerSecondForm" style="order:1;">
+
+     <!-- playType-->
+<div class="containerItem">
+  <label for="playType">Was the play a Run or Pass?:</label> 
+  <input type="button" id="playTypeRun" class="inputTextStyle" value="Run">
+  <input type="button" id="playTypePass" class="inputTextStyle" value="Pass">
+</div>
+      <!-- hash-->
+<div class="containerItem">
+    <p>Where was the hash?: </p>
+      <label for="left">Left</label>
+        <input type="radio" id="left" value="left" name="hash">
+      <br>
+      <label for="middle">Middle</label>
+        <input type="radio" id="middle" value="middle" name="hash">
+      <br>
+      <label for="right">Right</label>
+        <input type="radio" id="right" value="right" name="hash">
+      <br>
+</div>
+   
+   <div class="containerItem"> <!--backfield calls-->
+     <label for="backfieldCalls">What was the backfield call? :</label> 
+     <input id="backfieldCalls" class="inputTextStyle" placeholder="What was the backfield call?">
+     <label for="backfieldCalls"></label>
+   </div>
+ <div class="containerItem"> <!--offensive play-->
+   <label for="oPlay">What was the offensive play? :</label> 
+     <input id="oPlay" class="inputTextStyle" placeholder="What was the offensive play?">
+     <label for="oPlay"></label>
+   </div>
+      <div class="containerItem">
+    <p>Where was the offensive strength?: </p>
+      <label for="left">Strong Left</label>
+        <input type="radio" id="left" value="left" name="oStrength">
+      <br>
+      <label for="middle">Even Middle</label>
+        <input type="radio" id="middle" value="middle" name="oStrength">
+      <br>
+      <label for="right">Strong Right</label>
+        <input type="radio" id="right" value="right" name="oStrength">
+      <br>
+</div>   
+    <div class="containerItem">
+   <p>What direction was the play in?: </p>
+      <label for="left">Left</label>
+        <input type="radio" id="left" value="left" name="playDirection">
+      <br>
+      <label for="middle">Middle</label>
+        <input type="radio" id="middle" value="middle" name="playDirection">
+      <br>
+      <label for="right">Right</label>
+        <input type="radio" id="right" value="right" name="playDirection">
+      <br>
+    </div>
+  </div>
+    
+<div class="bottomContainer" style="order:2">
+
+   <div class="containerItem">
+  <input type="submit" value="Submit" class="inputTextStyle">
+
+</div>
+  </div>
+    
+    
+  </div>
+    
+
+  </div>
+
+ 
+  
+</form>
+
+
+
+
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

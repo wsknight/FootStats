@@ -1,0 +1,123 @@
+html {
+  height: 100%;
+  font-family: 'Graduate', cursive;
+  width: 100%;
+  background-color: #2aa147;
+  position: static;
+}
+
+.headstyle{
+  border-radius:5px;
+  text-align: center;
+  background-color:gray;
+  box-shadow: -1px 1px 5px #5e5e5e;
+  color:white;
+  letter-spacing:2px;
+  word-spacing: 5px;
+  text-shadow: 2px 2px 10px black;
+  font-family: 'Graduate', cursive;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.entireDisplay{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width:100%;
+  background-color: #2d7539;
+  border-radius:5px;
+  color: white;
+  box-shadow: -1px 1px 5px darkgreen;
+  position: static;
+}
+.topContainer{
+  display: flex;
+  height:100%;
+  width:100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top:5%;
+  margin-bottom:0%;
+  padding-bottom:5%;
+}
+.bottomContainer{
+  display: flex;
+  height:100%;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top:5%;
+  margin-bottom:0%;
+  padding-bottom:5%;
+  position: relative;
+}
+.topContainerSecondForm{
+  display: flex;
+  height:100%;
+  width:100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top:5%;
+  margin-bottom:0%;
+  padding-bottom:5%;
+}
+
+.containerItem{
+  margin: 5%;
+}
+
+::placeholder{
+  color: black;
+  opacity: 1;
+  text-align:left;
+  font-family: 'Nunito Sans', sans-serif;;
+}
+
+.footballField{
+  height: 100%;
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0%;
+  outline:none;
+  width: 80%;
+  position: absolute;
+  bottom: 60%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url(img/football.png);
+  background-size: cover;
+  width:100px;
+  height:100px;
+  scale: 100%;
+  cursor: pointer;
+}
+.slider::-webkit-slider-runnable-track{
+appearance: none;
+}
+.inputTextStyle{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Graduate', cursive;
+}
+
