@@ -13,7 +13,10 @@ if(!$conn){
 }
 //SQL Statement
 $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
-VALUES (1, 'teamOne', 'teamTwo', 'ODK')";
+VALUES (gameNum, 'teamOne', 'teamTwo', 'ODK')";
+
+$sql = "INSERT INTO fieldInformation (lineOfScrimmage)
+VALUES ('lineOfScrim')";
 
 //SQL Query
 if(mysqli_query($conn, $sql)) {
