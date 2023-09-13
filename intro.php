@@ -15,9 +15,6 @@ if(!$conn){
 $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
 VALUES (gameNum, 'teamOne', 'teamTwo', 'ODK')";
 
-$sql = "INSERT INTO fieldInformation (lineOfScrimmage)
-VALUES ('lineOfScrim')";
-
 //SQL Query
 if(mysqli_query($conn, $sql)) {
   echo "New Record Created";
