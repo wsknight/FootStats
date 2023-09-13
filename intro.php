@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "FootStats";
+$password = "foot";
 $dbname = "footballApp";
 
 //Create a Connection
