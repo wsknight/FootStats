@@ -20,7 +20,11 @@ $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
 VALUES ($gameNum, '$teamOne', '$teamTwo', 'K')";
 
 //SQL Query
-(mysqli_query($conn, $sql)
+if(mysqli_query($conn, $sql)) {
+  echo "New Record Created";
+}else{
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
 //Close Connection
 mysqli_close($conn);
   
