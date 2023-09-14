@@ -6,7 +6,7 @@ $dbname = "footballApp";
 $gameNum = $_POST['gameNum'];
 $teamOne = $_POST['teamOne'];
 $teamTwo = $_POST['teamTwo'];
-$ODK = $_POST[''];
+
 
 //Create a Connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -17,14 +17,10 @@ if(!$conn){
 }
 //SQL Statement
 $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
-VALUES ($gameNum, '$teamOne', '$teamTwo', '$ODK')";
+VALUES ($gameNum, '$teamOne', '$teamTwo', 'K')";
 
 //SQL Query
-if(mysqli_query($conn, $sql)) {
-  echo "New Record Created";
-}else{
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+(mysqli_query($conn, $sql)
 //Close Connection
 mysqli_close($conn);
   
