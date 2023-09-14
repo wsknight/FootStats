@@ -9,11 +9,11 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 //check connection
 if(!$conn){
-  die("Connection failed: " .mysqli_connect_error() );
+  die("Connection failed: " . mysqli_connect_error() );
 }
 //SQL Statement
 $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
-VALUES (gameNum, 'teamOne', 'teamTwo', 'ODK')";
+VALUES ('gameNum', 'teamOne', 'teamTwo', 'ODK')";
 
 //SQL Query
 if(mysqli_query($conn, $sql)) {
