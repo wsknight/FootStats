@@ -27,7 +27,8 @@ if(mysqli_query($conn, $sql)) {
 }
 //Close Connection
 mysqli_close($conn);
-  
+
+header("Location: secondform.html")
 ?>
 
 
