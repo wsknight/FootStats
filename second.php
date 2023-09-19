@@ -4,6 +4,9 @@ $servername = "localhost";
 $username = "root";
 $password = "foot";
 $dbname = "footballApp";
+$gameNum = $_POST['gameNum'];
+$teamOne = $_POST['teamOne'];
+$teamTwo = $_POST['teamTwo'];
 
 
 //create connection
@@ -31,9 +34,9 @@ echo "<table>
         </tr>";
     while($row = mysqli_fetch_assoc($result)){
       echo "<tr>
-              <td>" . $row['gameNum']. "</td>
-              <td>" . $row['teamOne']. "</td>
-              <td>" . $row['teamTwo']. "</td>
+              <td>" . $row['$gameNum']. "</td>
+              <td>" . $row['$teamOne']. "</td>
+              <td>" . $row['$teamTwo']. "</td>
             </tr>
             ";
     }
