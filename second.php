@@ -23,7 +23,7 @@ $sql = "SELECT * FROM games"
 //FROM mytable
 //WHERE lastName="Wheeler" AND firstName = "Wayne" <-- This selects every record that has the lastName variable equal wheeler, this is useful for specific condition record manipulation.
 
-$result = mysqli_query($conn, $sql)
+$result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)>0){
 echo "<table>
