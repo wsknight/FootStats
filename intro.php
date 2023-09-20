@@ -6,6 +6,7 @@ $dbname = "footballApp";
 $gameNum = $_POST['gameNum'];
 $teamOne = $_POST['teamOne'];
 $teamTwo = $_POST['teamTwo'];
+$lineOfScrim = $_POST['lineOfScrimmage']
 
 
 //Create a Connection
@@ -19,6 +20,9 @@ if(!$conn){
 $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
 VALUES ($gameNum, '$teamOne', '$teamTwo', 'K')";
 
+$sql = "INSERT INTO fieldInformation (lineOfScrim)
+VALUES ($lineOfScrim)"
+  
 //SQL Query
 if(mysqli_query($conn, $sql)) {
   echo "New Record Created";
