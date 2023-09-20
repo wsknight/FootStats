@@ -26,13 +26,13 @@ if(mysqli_query($conn, $sql)) {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-$sql = "SELECT * FROM games"
+$sql2 = "SELECT * FROM games"
 
 //SELECT example without *: firstName, lastName, email 
 //FROM mytable
 //WHERE lastName="Wheeler" AND firstName = "Wayne" <-- This selects every record that has the lastName variable equal wheeler, this is useful for specific condition record manipulation.
 
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql2);
 
 if(mysqli_num_rows($result)>0){
 echo "<table>
