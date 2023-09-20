@@ -21,7 +21,7 @@ if(!$conn){
 }
 //SQL Statement
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
-VALUES($playType, $hash, $backfieldCalls, $oPlay, $oStrength, $playDirection)";
+VALUES('$playType', '$hash', '$backfieldCalls', '$oPlay', '$oStrength', '$playDirection')";
 
 //SQL Query
 if(mysqli_query($conn, $sql)) {
