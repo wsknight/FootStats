@@ -19,9 +19,12 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn){
   die("Connection failed: " . mysqli_connect_error() );
 }
-//SQL Statement
+//SQL insert statement
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES('$playType', '$hash', '$backfieldCalls', '$oPlay', '$oStrength', '$playDirection')";
+
+//sql grab statement
+$sql = "SELECT * FROM playInformation";
 
 $result = mysqli_query($conn, $sql);
 
