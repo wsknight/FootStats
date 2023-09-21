@@ -1,17 +1,3 @@
-<html>
-  
-<head>
-  <style>
-    table{
-      border-style: solid;
-      border-width:2px;
-      border-color:green;
-    }
-  </style>
-</head>
-  
-<body>
-
 <?php
 $servername = "localhost";
 $username = "root";
@@ -51,14 +37,14 @@ if(mysqli_num_rows($result)>0){
             <th>Play Type</th>
         </tr>";
     while($row = mysqli_fetch_assoc($result)){
-        echo "<tr>
-              <td>" . $row['$backfieldCalls'] . "</td>
-              <td>" . $row['$hash'] . "</td>
-              <td>" . $row['$oPlay'] . "</td>
-              <td>" . $row['$oStrength']. "</td>
-              <td>" . $row['$playDirection']. "</td>
-              <td>" . $row['$playType']. "</td>
-            </tr>";
+        echo "<tr>";
+        echo "<td>" . $row['$backfieldCalls'] . "</td>";
+        echo "<td>" . $row['$hash'] . "</td>";
+        echo "<td>" . $row['$oPlay'] . "</td>";
+        echo "<td>" . $row['$oStrength']. "</td>";
+        echo "<td>" . $row['$playDirection']. "</td>";
+        echo "<td>" . $row['$playType']. "</td>";
+        echo "</tr>";
     }
  echo"</table>";
     
@@ -71,6 +57,3 @@ if(mysqli_num_rows($result)>0){
 mysqli_close($conn);
 
 ?>
-
-</body>
-</html>
