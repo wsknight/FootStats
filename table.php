@@ -28,17 +28,17 @@ $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)>0){
     while($row = mysqli_fetch_assoc($result)){
-      echo "
-          <table>
+      echo "<table>";
+        echo "
               <tr>
-              <td>" $row['$backfieldCalls'] . "</td>
+              <td>" . $row['$backfieldCalls'] . "</td>
               <td>" . $row['$hash'] . "</td>
               <td>" . $row['$oPlay'] . "</td>
               <td>" . $row['$oStrength']. "</td>
               <td>" . $row['$playDirection']. "</td>
               <td>" . $row['$playType']. "</td>
-            </tr>
-            </table>";
+            </tr>";
+        echo"</table>";
     }
   
 }else{
