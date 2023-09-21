@@ -23,11 +23,26 @@ if(!$conn){
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES('$playType', '$hash', '$backfieldCalls', '$oPlay', '$oStrength', '$playDirection')";
 
-//SQL Query
-if(mysqli_query($conn, $sql)) {
-  echo "New Record Created";
+
+$result = mysqli_query($conn, $sql);
+
+if(mysqli_num_rows($result)>0){
+    while($row = mysqli_fetch_assoc($result)){
+      echo "
+          <table>
+              <tr>
+              <td>" $row['$backfieldCalls'] . "</td>
+              <td>" . $row['hash'] . "</td>
+              <td>" . $row['oPlay'] . "</td>
+              <td>" . $row['oStrength']. "</td>
+              <td>" . $row['playDirection']. "</td>
+              <td>" . $row['playType']. "</td>
+            </tr>
+            </table>";
+    }
+  
 }else{
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  die;
 }
 
 //Close Connection
