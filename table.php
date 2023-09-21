@@ -26,21 +26,15 @@ VALUES('$playType', '$hash', '$backfieldCalls', '$oPlay', '$oStrength', '$playDi
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)>0){
-   echo "<table>
-        <tr>
-            <th>backfield calls</th>
-            <th>hash</th>
-            <th>Offensive Play</th>
-            <th>Offensive Strength</th>
-            <th>Play Direction</th>
-            <th>Play Type</th>
-        </tr>";
- echo"</table>";
+   echo "<p>Hello</p>";
+   echo "<table>";
+   echo "<th>Testing</th>";
+   echo "</table";
     
   
 }else{
-  die();
-}
+  echo "Nice try idiot didn't work";
+};
 
 //Close Connection
 mysqli_close($conn);
