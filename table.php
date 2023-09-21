@@ -35,17 +35,6 @@ if(mysqli_num_rows($result)>0){
             <th>Play Direction</th>
             <th>Play Type</th>
         </tr>";
-    while($row = mysqli_fetch_assoc($result))
-    {
-        echo "<tr>";
-        echo "<td>" . $row['$backfieldCalls'] . "</td>";
-        echo "<td>" . $row['$hash'] . "</td>";
-        echo "<td>" . $row['$oPlay'] . "</td>";
-        echo "<td>" . $row['$oStrength']. "</td>";
-        echo "<td>" . $row['$playDirection']. "</td>";
-        echo "<td>" . $row['$playType']. "</td>";
-        echo "</tr>";
-    }
  echo"</table>";
     
   
