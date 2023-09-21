@@ -27,8 +27,16 @@ VALUES('$playType', '$hash', '$backfieldCalls', '$oPlay', '$oStrength', '$playDi
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)>0){
+   echo "<table>
+        <tr>
+            <th>backfield calls</th>
+            <th>hash</th>
+            <th>Offensive Play</th>
+            <th>Offensive Strength</th>
+            <th>Play Direction</th>
+            <th>Play Type</th>
+        </tr>";
     while($row = mysqli_fetch_assoc($result)){
-      echo "<table>";
         echo "
               <tr>
               <td>" . $row['$backfieldCalls'] . "</td>
@@ -38,8 +46,9 @@ if(mysqli_num_rows($result)>0){
               <td>" . $row['$playDirection']. "</td>
               <td>" . $row['$playType']. "</td>
             </tr>";
-        echo"</table>";
     }
+ echo"</table>";
+    
   
 }else{
   die();
