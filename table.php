@@ -1,3 +1,17 @@
+<html>
+  
+<head>
+  <style>
+    table{
+      border-style: solid;
+      border-width:2px;
+      border-color:green;
+    }
+  </style>
+</head>
+  
+<body>
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -24,7 +38,7 @@ $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStr
 VALUES('$playType', '$hash', '$backfieldCalls', '$oPlay', '$oStrength', '$playDirection')";
 
 
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query("SELECT * FROM playInformation");
 
 if(mysqli_num_rows($result)>0){
    echo "<table>
@@ -37,8 +51,7 @@ if(mysqli_num_rows($result)>0){
             <th>Play Type</th>
         </tr>";
     while($row = mysqli_fetch_assoc($result)){
-        echo "
-              <tr>
+        echo "<tr>
               <td>" . $row['$backfieldCalls'] . "</td>
               <td>" . $row['$hash'] . "</td>
               <td>" . $row['$oPlay'] . "</td>
@@ -58,3 +71,6 @@ if(mysqli_num_rows($result)>0){
 mysqli_close($conn);
 
 ?>
+
+</body>
+</html>
