@@ -32,17 +32,17 @@ if(mysqli_num_rows($result)>0){
           <table>
               <tr>
               <td>" $row['$backfieldCalls'] . "</td>
-              <td>" . $row['hash'] . "</td>
-              <td>" . $row['oPlay'] . "</td>
-              <td>" . $row['oStrength']. "</td>
-              <td>" . $row['playDirection']. "</td>
-              <td>" . $row['playType']. "</td>
+              <td>" . $row['$hash'] . "</td>
+              <td>" . $row['$oPlay'] . "</td>
+              <td>" . $row['$oStrength']. "</td>
+              <td>" . $row['$playDirection']. "</td>
+              <td>" . $row['$playType']. "</td>
             </tr>
             </table>";
     }
   
 }else{
-  die;
+  die();
 }
 
 //Close Connection
