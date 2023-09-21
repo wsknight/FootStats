@@ -29,15 +29,32 @@ $sql = "SELECT * FROM playInformation";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)>0){
-   echo "<p>Hello</p>";
-   echo "<table>";
-   echo "<th>Testing</th>";
-   echo "</table";
-    
+echo "<table>
+        <tr>
+            <th>Run Or Pass</th>
+            <th>Hash</th>
+            <th>Backfield Calls</th>
+            <th>Offensive Play</th>
+            <th>Offensive Strength</th>
+            <th>Play Direction</th>
+        </tr>";
+    while($row = mysqli_fetch_assoc($result)){
+      echo "<tr>
+              <td>" . $row['$playType']. "</td>
+              <td>" . $row['$hash']. "</td>
+              <td>" . $row['$backfieldCalls']. "</td>
+              <td>" . $row['$oPlay']. "</td>
+              <td>" . $row['$oStrength']. "</td>
+              <td>" . $row['$playDirection']. "</td>
+            </tr>
+            ";
+    }
+echo "</table>";
   
 }else{
-  echo "Nice try idiot didn't work";
-};
+  die;
+}
+
 
 //Close Connection
 mysqli_close($conn);
