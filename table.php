@@ -40,12 +40,12 @@ echo "<table>
         </tr>";
     while($row = mysqli_fetch_assoc($result)){
       echo "<tr>
-              <td>" . $row['$playType']. "</td>
-              <td>" . $row['$hash']. "</td>
-              <td>" . $row['$backfieldCalls']. "</td>
-              <td>" . $row['$oPlay']. "</td>
-              <td>" . $row['$oStrength']. "</td>
-              <td>" . $row['$playDirection']. "</td>
+              <td>" . $row['playType']. "</td>
+              <td>" . $row['hash']. "</td>
+              <td>" . $row['backfieldCalls']. "</td>
+              <td>" . $row['oPlay']. "</td>
+              <td>" . $row['oStrength']. "</td>
+              <td>" . $row['playDirection']. "</td>
             </tr>
             ";
     }
