@@ -25,9 +25,12 @@ $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStr
 VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$playDirection')";
 
 //sql grab statement
-$sql2 = "SELECT * FROM playInformation";
+$sqlSelect = "SELECT * FROM playInformation";
 
-$result = mysqli_query($conn, $sql2);
+mysqli_query($conn, $sql);
+
+$result = mysqli_query($conn, $sqlSelect);
+
 
 if(mysqli_num_rows($result)>0){
 echo "<table>
