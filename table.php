@@ -24,10 +24,10 @@ if(!$conn){
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$playDirection')";
 
+mysqli_query($conn, $sql);
+
 //sql grab statement
 $sqlSelect = "SELECT * FROM playInformation";
-
-mysqli_query($conn, $sql);
 
 $result = mysqli_query($conn, $sqlSelect);
 
