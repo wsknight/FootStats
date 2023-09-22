@@ -31,7 +31,6 @@ $sqlSelect = "SELECT * FROM playInformation";
 
 $result = mysqli_query($conn, $sqlSelect);
 
-echo ""
 if(mysqli_num_rows($result)>0){
 echo "<table>
         <tr>
@@ -58,7 +57,7 @@ echo "<table>
 echo "</table>";
   
 }else{
-  echo "didn't work";
+  die;
 }
 
 //Close Connection
