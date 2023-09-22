@@ -1,3 +1,18 @@
+<html>
+  
+<head>  
+<style>
+
+table{
+  border: 5px;
+}
+  
+</style>
+  
+</head>
+
+<body>
+
 <?php
 
 $servername = "localhost";
@@ -57,10 +72,14 @@ echo "<table>
 echo "</table>";
   
 }else{
-  die;
+  die();
 }
 
 //Close Connection
 mysqli_close($conn);
 
 ?>
+
+</body>
+
+</html>
