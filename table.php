@@ -1,3 +1,12 @@
+<html>
+  
+<head>  
+<link href="style.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body>
+
 <?php
 
 $servername = "localhost";
@@ -31,7 +40,7 @@ $sqlSelect = "SELECT * FROM playInformation";
 
 $result = mysqli_query($conn, $sqlSelect);
 
-
+echo ""
 if(mysqli_num_rows($result)>0){
 echo "<table>
         <tr>
@@ -65,3 +74,7 @@ echo "</table>";
 mysqli_close($conn);
 
 ?>
+
+</body>
+
+</html>
