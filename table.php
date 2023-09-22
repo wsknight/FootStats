@@ -1,18 +1,3 @@
-<html>
-  
-<head>  
-<style>
-
-table{
-  border: 5px;
-}
-  
-</style>
-  
-</head>
-
-<body>
-
 <?php
 
 $servername = "localhost";
@@ -80,7 +65,3 @@ echo "</table>";
 mysqli_close($conn);
 
 ?>
-
-</body>
-
-</html>
