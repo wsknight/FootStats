@@ -120,3 +120,7 @@ appearance: none;
   font-family: 'Graduate', cursive;
 }
 
+table{
+  border: 5px;
+}
+
