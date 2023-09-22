@@ -22,7 +22,7 @@ if(!$conn){
 
 //SQL insert statement
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
-VALUES('$playType', '$hash', '$backfieldCalls', '$oPlay', '$oStrength', '$playDirection')";
+VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$playDirection')";
 
 //sql grab statement
 $sql2 = "SELECT * FROM playInformation";
