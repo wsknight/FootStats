@@ -1,7 +1,13 @@
 <html>
   
 <head>  
-<link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+
+table{
+  border: 5px;
+}
+  
+</style>
   
 </head>
 
