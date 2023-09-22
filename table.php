@@ -3,8 +3,12 @@
 <head>  
 <style>
 
+th, td {
+  border: 1px solid;
+}
 table{
-  border: 5px;
+  width: 100%;
+  border-collapse: collapse;
 }
   
 </style>
