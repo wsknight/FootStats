@@ -11,7 +11,6 @@ $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
 
 
-
 //Create a Connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -19,14 +18,15 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn){
   die("Connection failed: " . mysqli_connect_error() );
 }
+
 //SQL insert statement
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES('$playType', '$hash', '$backfieldCalls', '$oPlay', '$oStrength', '$playDirection')";
 
 //sql grab statement
-$sql = "SELECT * FROM playInformation";
+$sql2 = "SELECT * FROM playInformation";
 
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql2);
 
 if(mysqli_num_rows($result)>0){
 echo "<table>
