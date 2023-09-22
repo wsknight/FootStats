@@ -1,7 +1,8 @@
 <html>
   
 <head>  
-<style>
+  
+<style type="text/css">
 
 th, td {
   border: 1px solid;
