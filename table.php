@@ -51,9 +51,16 @@ $sqlSelect = "SELECT * FROM playInformation";
 
 $result = mysqli_query($conn, $sqlSelect);
 
-$if (isset($_GET['id']))
+
+
+//Seeing if it has received an id.
+if (isset($_GET['id']))
   {
   echo $_GET['id'];
+ // $id=_GET['id'];
+  //$delete=mysqli_query($conn,"DELETE FROM 'playInformation' WHERE 'playID'='$id'");
+  //header("location:table.php");
+  //die();
   }
 
 
@@ -77,7 +84,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <a href='index.php?id=" . $row['playID'] . "' class='button'>Delete<a> <td>
+              <td> <a href='index.php?id=".$row['playID']."' class='button'>Delete<a> <td>
             </tr>
             ";
     }
