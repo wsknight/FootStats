@@ -40,6 +40,17 @@ if(!$conn){
   die("Connection failed: " . mysqli_connect_error() );
 }
 
+//Seeing if it has received an id.
+if (isset($_GET['id']))
+  {
+ // echo $_GET['id'];
+  $id=_GET['id'];
+  $delete=mysqli_query($conn,"DELETE FROM 'playInformation' WHERE 'playID'='$id'");
+  header("location:table.php");
+  die();
+  }
+
+
 //SQL insert statement
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$playDirection')";
@@ -52,16 +63,6 @@ $sqlSelect = "SELECT * FROM playInformation";
 $result = mysqli_query($conn, $sqlSelect);
 
 
-
-//Seeing if it has received an id.
-if (isset($_GET['id']))
-  {
- // echo $_GET['id'];
-  $id=_GET['id'];
-  $delete=mysqli_query($conn,"DELETE FROM 'playInformation' WHERE 'playID'='$id'");
-  header("location:table.php");
-  die();
-  }
 
 
 if(mysqli_num_rows($result)>0){
