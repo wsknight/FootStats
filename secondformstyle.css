@@ -23,8 +23,8 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100%;
-  width:90%;
+  height: 60%;
+  width:95%;
   background-color: #2d7539;
   border-radius:5px;
   color: white;
@@ -75,6 +75,10 @@ html {
 
 .containerRadio{
   align-items: center;
+  text-align:center;
+  justify-content:center;
+  align-content: center;
+  justify-items: center;
   margin-top: 0%;
   width: 25%
 }
@@ -125,4 +129,8 @@ appearance: none;
 }
 input[type="radio"]{
   width:100%;
+}
+
+.table{
+  
 }
