@@ -56,11 +56,11 @@ $result = mysqli_query($conn, $sqlSelect);
 //Seeing if it has received an id.
 if (isset($_GET['id']))
   {
-  echo $_GET['id'];
- // $id=_GET['id'];
-  //$delete=mysqli_query($conn,"DELETE FROM 'playInformation' WHERE 'playID'='$id'");
-  //header("location:table.php");
-  //die();
+ // echo $_GET['id'];
+  $id=_GET['id'];
+  $delete=mysqli_query($conn,"DELETE FROM 'playInformation' WHERE 'playID'='$id'");
+  header("location:table.php");
+  die();
   }
 
 
