@@ -46,6 +46,7 @@ if (isset($_GET['id']))
  // echo $_GET['id'];
   $id=_GET['id'];
   $delete=mysqli_query($conn,"DELETE FROM 'playInformation' WHERE 'playID'='$id'");
+  error_log("Should be good"); 
   header("location:table.php");
   die();
   }
