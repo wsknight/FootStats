@@ -51,6 +51,12 @@ $sqlSelect = "SELECT * FROM playInformation";
 
 $result = mysqli_query($conn, $sqlSelect);
 
+$if (isset($_GET['id']))
+  {
+  echo $_GET['id'];
+  }
+
+
 if(mysqli_num_rows($result)>0){
 echo "<table>
         <tr>
@@ -71,6 +77,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
+              <td> <a href='index.php?id=" . $row['playID'] . "' class='button'>Delete<a> <td>
             </tr>
             ";
     }
