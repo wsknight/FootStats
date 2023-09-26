@@ -106,10 +106,5 @@ mysqli_close($conn);
 </body>
 
   
-<script>
-
-
-  
-</script>
   
 </html>
