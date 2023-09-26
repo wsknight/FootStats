@@ -3,7 +3,6 @@
 <head>  
   
 <style type="text/css">
-
 th, td {
   border: 1px solid;
 }
@@ -41,18 +40,18 @@ if(!$conn){
 }
 
 //Seeing if it has received an id.
-if (isset($_GET['id']))
-  {
+//if (isset($_GET['id']))
+  //{
  // echo $_GET['id'];
-  $id=_GET['id'];
-  echo "<div>
-        <p>Are you sure you want to delete : '$id'?<p>
-        <div>
-  "
+  //$id=_GET['id'];
+  //echo "<div>
+   //     <p>Are you sure you want to delete : '$id'?<p>
+     //   <div>
+  //"
  // $delete=mysqli_query($conn,"DELETE FROM 'playInformation' WHERE 'playID'='$id'");
  // header("location:table.php");
  // die();
-  }
+//  }
 
 
 //SQL insert statement
@@ -89,7 +88,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <a href='table.php?id=".$row['playID']."' class='button'>Delete<a> <td>
+              <td> <a href='delete.php?id=".$row['playID']."' class='button'>Delete<a> <td>
             </tr>
             ";
     }
@@ -106,4 +105,11 @@ mysqli_close($conn);
 
 </body>
 
+  
+<script>
+
+
+  
+</script>
+  
 </html>
