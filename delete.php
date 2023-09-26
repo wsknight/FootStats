@@ -1,3 +1,22 @@
+<html>
+  
+<head>  
+  
+<style type="text/css">
+th, td {
+  border: 1px solid;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+  
+</style>
+  
+</head>
+
+<body>
+
 <?php>
 
 $servername = "localhost";
@@ -64,3 +83,9 @@ $result = mysqli_query($conn, $sqlSelect);
 
 
 ?>
+
+</body>
+
+  
+  
+</html>
