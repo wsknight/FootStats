@@ -36,7 +36,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
 $id = $_GET['id'];
-$sql="DELETE FROM playInformation WHERE `playInformation`.` playID='$id'";
+$sql="DELETE FROM playInformation WHERE playID='$id'";
 $result=mysqli_query($conn,$sql);
 
 if($result)

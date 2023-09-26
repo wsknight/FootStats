@@ -55,13 +55,13 @@ if(!$conn){
 
 
 //SQL insert statement
-if($playType)
+if($playType != null)
 {
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$playDirection')";
 
 mysqli_query($conn, $sql);
-}
+} 
 //sql grab statement
 $sqlSelect = "SELECT * FROM playInformation";
 
