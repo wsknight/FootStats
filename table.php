@@ -104,9 +104,18 @@ mysqli_close($conn);
 ?>
 <div class="prompt">
 <p>Are you sure you want to delete : </p>
+<tr>
+              <td>" . $row['playID'] . "</td>
+              <td>" . $row['playType']. "</td>
+              <td>" . $row['hash']. "</td>
+              <td>" . $row['backfieldCalls']. "</td>
+              <td>" . $row['oPlay']. "</td>
+              <td>" . $row['oStrength']. "</td>
+              <td>" . $row['playDirection']. "</td>      
+</tr>
 <label for="YesorNo" class="Yes"> </label>
-<input type="text" id="YesorNo" name="Yes" >
-<input type="text" id="YesorNo" name="No">
+<input type="button" id="YesorNo" name="Yes" >
+<input type="button" id="YesorNo" name="No">
   
 
 
