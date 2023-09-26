@@ -102,7 +102,17 @@ echo "</table>";
 mysqli_close($conn);
 
 ?>
+<div class="prompt">
+<p>Are you sure you want to delete : </p>
+<label for="YesorNo" class="Yes"> </label>
+<input type="text" id="YesorNo" name="Yes" >
+<input type="text" id="YesorNo" name="No">
+  
 
+
+
+</div>
+  
 </body>
 
   
