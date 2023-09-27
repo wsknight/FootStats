@@ -98,18 +98,20 @@ mysqli_close($conn);
 <p>Are you sure you want to delete : </p> 
 
 <label for="YesorNo" class="Yes"> </label>
-<input type="button" id="YesorNo" name="Yes" onclick="return confirm('Are you sure?')" >
+<input type="button" id="YesorNo" name="Yes" onclick="return clicked()" >
 <input type="button" id="YesorNo" name="No">
 
 </div>
 <script>
-  function clicked(e)
-{
-    if(!confirm('Are you sure?')) {
-        e.preventDefault();
+function clicked() {
+       if (confirm('Do you want to submit?')) {
+           yourformelement.submit();
+       } else {
+           return false;
+       }
     }
-  delete.php?id=.$row['playID'];
-}
+
+ delete.php?id=.$row['playID'];
 </script>
 
 
