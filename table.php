@@ -12,7 +12,7 @@ table{
 }
 .popup {
   position: absolute;
-  visibility: hidden;
+  visibility: show;
   
 }
   
@@ -80,7 +80,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <a onclick="return confirm('Are you sure?')" href='delete.php?id=".$row['playID']."' class='button'>Delete</a> <td>
+              <td> <input type="button" name="Yes" palceholder="Delete" onclick="return confirm('Are you sure?')"</td>
             </tr>
             ";
     }
@@ -102,9 +102,21 @@ mysqli_close($conn);
 <input type="button" id="YesorNo" name="No">
 
 </div>
+<script>
+  function clicked(e)
+{
+    if(!confirm('Are you sure?')) {
+        e.preventDefault();
+    }
+  delete.php?id=.$row['playID'];
+}
+</script>
+
+
   
 </body>
 
   
+  href='delete.php?id=".$row['playID']
   
 </html>
