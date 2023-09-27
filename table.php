@@ -90,7 +90,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <a href='delete.php?id=".$row['playID']."' class='button'>Delete<a> <td>
+              <td> <a href='delete.php?id=".$row['playID']."' class='button'>Delete</a> <td>
             </tr>
             ";
     }

@@ -5,19 +5,18 @@ var sliderOutput = document.getElementById("valueNum");
 sliderOutput.innerHTML = calcSliderKick(slider.value);
 slider.oninput = function() {
   sliderOutput.innerHTML = calcSliderKick(this.value);
+  slider.value = this.value;
 }
 
 
 getDate();
 //Functions
-function getDate() 
-{
-let date = new Date().toISOString().substring(0,10)
-document.getElementById("gameDate").value = date;
+function getDate() {
+  let date = new Date().toISOString().substring(0, 10)
+  document.getElementById("gameDate").value = date;
 }
 
-function changeScenarioText(str)
-{
+function changeScenarioText(str) {
   var scenarioText = document.getElementById("scenarioText");
   scenarioText.innerHTML = str;
 }
@@ -25,66 +24,52 @@ function changeScenarioText(str)
 function disableFields(name) //Function to make the fields of input readonly. name var is ID of Div 
 {
   var fields = document.getElementById(name).getElementsByTagName('input');
-  
+
 }
 
 
-function calcSliderKick(num)
-{
+function calcSliderKick(num) {
   let absnum = 50 - Math.abs(num);
-    if(num == 0)
-  {
-    return("On The: 50");
+  if (num == 0) {
+    return ("On The: 50");
   }
-  if(absnum == 0)
-  {
-    if(num == -50)
-    {
-      return("On The: Left 20 (Touchback)");
+  if (absnum == 0) {
+    if (num == -50) {
+      return ("On The: Left 20 (Touchback)");
     }
-    else
-    {
-      return("On The: Right 20 (Touchback)");
+    else {
+      return ("On The: Right 20 (Touchback)");
     }
   }
-    
-  if (num > 0) 
-  {
-    return("On The: Right " + absnum);
+
+  if (num > 0) {
+    return ("On The: Right " + absnum);
   }
-  else
-  {
-    return("On The: Left " + absnum);
+  else {
+    return ("On The: Left " + absnum);
   }
 }
 
 
-function calcSlider(num)
-{
+function calcSlider(num) {
   let absnum = 50 - Math.abs(num);
-    if(num == 0)
-  {
-    return("On The: 50");
+  if (num == 0) {
+    return ("On The: 50");
   }
-  if(absnum == 0)
-  {
-    if(num == -50)
-    {
-      return("Touchdown!!!");
+  if (absnum == 0) {
+    if (num == -50) {
+      return ("Touchdown!!!");
     }
-    else
-    {
-      return("Touchdown!!!");
+    else {
+      return ("Touchdown!!!");
     }
   }
-    
-  if (num > 0) 
-  {
-    return("On The: Right " + absnum);
+
+  if (num > 0) {
+    return ("On The: Right " + absnum);
   }
-  else
-  {
-    return("On The: Left " + absnum);
+  else {
+    return ("On The: Left " + absnum);
   }
 }
 
