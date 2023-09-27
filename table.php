@@ -10,6 +10,11 @@ table{
   width: 100%;
   border-collapse: collapse;
 }
+.popup {
+  position: absolute;
+  visibility: hidden;
+  
+}
   
 </style>
   
@@ -38,21 +43,6 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn){
   die("Connection failed: " . mysqli_connect_error() );
 }
-
-//Seeing if it has received an id.
-//if (isset($_GET['id']))
-  //{
- // echo $_GET['id'];
-  //$id=_GET['id'];
-  //echo "<div>
-   //     <p>Are you sure you want to delete : '$id'?<p>
-     //   <div>
-  //"
- // $delete=mysqli_query($conn,"DELETE FROM 'playInformation' WHERE 'playID'='$id'");
- // header("location:table.php");
- // die();
-//  }
-
 
 //SQL insert statement
 if($playType != null)
@@ -90,7 +80,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <a href='delete.php?id=".$row['playID']."' class='button'>Delete</a> <td>
+              <td> <a onclick="return confirm('Are you sure?')" href='delete.php?id=".$row['playID']."' class='button'>Delete</a> <td>
             </tr>
             ";
     }
@@ -104,15 +94,12 @@ echo "</table>";
 mysqli_close($conn);
 
 ?>
-<div class="prompt">
-<p>Are you sure you want to delete : </p>
+<div class="popup" id="popup">
+<p>Are you sure you want to delete : </p> 
 
 <label for="YesorNo" class="Yes"> </label>
-<input type="button" id="YesorNo" name="Yes" >
+<input type="button" id="YesorNo" name="Yes" onclick="return confirm('Are you sure?')" >
 <input type="button" id="YesorNo" name="No">
-  
-
-
 
 </div>
   
