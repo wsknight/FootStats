@@ -5,7 +5,6 @@ var sliderOutput = document.getElementById("valueNum");
 sliderOutput.innerHTML = calcSliderKick(slider.value);
 slider.oninput = function() {
   sliderOutput.innerHTML = calcSliderKick(this.value);
-  slider.value = this.value;
 }
 
 
@@ -15,7 +14,7 @@ function getDate() {
   let date = new Date().toISOString().substring(0, 10)
   document.getElementById("gameDate").value = date;
 }
-
+//unused rn will use later for other scenarios
 function changeScenarioText(str) {
   var scenarioText = document.getElementById("scenarioText");
   scenarioText.innerHTML = str;

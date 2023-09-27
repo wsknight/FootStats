@@ -27,12 +27,12 @@ if(mysqli_query($conn, $sql)) {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 //SQL Statement
-$sql = "INSERT INTO fieldInformation (lineOfScrim)
+$sql2 = "INSERT INTO fieldInformation (lineOfScrim)
 VALUES ($lineOfScrim)";
 
   
 //SQL Query
-if(mysqli_query($conn, $sql)) {
+if(mysqli_query($conn, $sql2)) {
   echo "New Record Created";
 }else{
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
