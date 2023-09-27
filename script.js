@@ -9,16 +9,18 @@ slider.oninput = function() {
 
 
 getDate();
+
+
 //Functions
+
+
+//Function that gets current date
 function getDate() {
   let date = new Date().toISOString().substring(0, 10)
   document.getElementById("gameDate").value = date;
 }
-//unused rn will use later for other scenarios
-function changeScenarioText(str) {
-  var scenarioText = document.getElementById("scenarioText");
-  scenarioText.innerHTML = str;
-}
+
+
 
 function disableFields(name) //Function to make the fields of input readonly. name var is ID of Div 
 {
