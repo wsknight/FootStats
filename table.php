@@ -79,10 +79,9 @@ echo "<table>
               <td>" . $row['backfieldCalls']. "</td>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
-              <td>" . $row['playDirection']. "</td>"
-              "<td> <input type='button' name='yes' palceholder='Delete' id='delete'> </td>"
-            "</tr>
-            ";
+              <td>" . $row['playDirection']. "</td>
+              <td>" "<input type="button" name="yes" palceholder="Delete" id="delete">" "</td>"
+            "</tr>";
     }
 echo "</table>";
   
