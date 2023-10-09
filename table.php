@@ -61,7 +61,7 @@ $result = mysqli_query($conn, $sqlSelect);
 
 
 if(mysqli_num_rows($result)>0){
-echo "<form action='/delete.php' method='post'>";
+echo "<form action='/delete.php?id=".$row['playID']" method='post'>";
 echo "<table>
         <tr>
             <th>Play Number</th>
