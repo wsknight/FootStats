@@ -61,7 +61,6 @@ $result = mysqli_query($conn, $sqlSelect);
 
 
 if(mysqli_num_rows($result)>0){
-echo "<form action='/delete.php?id=".$row['playID']" method='post'>";
 echo "<table>
         <tr>
             <th>Play Number</th>
@@ -73,6 +72,7 @@ echo "<table>
             <th>Play Direction</th>
         </tr>";
     while($row = mysqli_fetch_assoc($result)){
+      echo "<form action='/delete.php?id=".$row['playID']" method='post'>";
       echo "<tr>
               <td>" . $row['playID'] . "</td>
               <td>" . $row['playType']. "</td>
