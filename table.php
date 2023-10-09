@@ -61,6 +61,7 @@ $result = mysqli_query($conn, $sqlSelect);
 
 
 if(mysqli_num_rows($result)>0){
+echo "<form action='/delete.php' method='post'>"
 echo "<table>
         <tr>
             <th>Play Number</th>
@@ -80,10 +81,11 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <input type='button' placeholder='delete' id='delete' name='delete' value='delete'> </td>
+              <td> <button type='submit' name='delete' value='delete'" . $row['id'] . "delete </button> </td>
             </tr>";
     }
 echo "</table>";
+echo "</form>";
   
 }else{
   die();

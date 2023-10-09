@@ -74,7 +74,10 @@ function calcSlider(num) {
   }
 }
 
-document.getElementById('delete').addEventListener("click", confirm('Are you sure you want to delete?'));
+button = document.getElementById('delete')
+
+button.addEventListener("click", confirm('Are you sure you want to delete?'));
+
 
 
 
