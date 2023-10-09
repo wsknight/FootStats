@@ -80,7 +80,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <input type="button" name="Yes" palceholder="Delete" onclick="return confirm('Are you sure?')"</td>
+              <td> <input type="button" name="Yes" palceholder="Delete" id="delete"> </td>
             </tr>
             ";
     }
@@ -98,7 +98,7 @@ mysqli_close($conn);
 <p>Are you sure you want to delete : </p> 
 
 <label for="YesorNo" class="Yes"> </label>
-<input type="button" id="YesorNo" name="Yes" onclick="return confirm('Are you sure?')" >
+<input type="button" id="YesorNo" name="Yes">
 <input type="button" id="YesorNo" name="No">
 
 </div>
@@ -106,6 +106,6 @@ mysqli_close($conn);
 </body>
 
   
-
+<script src="script.js"></script>
   <!--T  href='delete.php?id=".$row['playID']-->
 </html>

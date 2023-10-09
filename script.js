@@ -74,11 +74,15 @@ function calcSlider(num) {
   }
 }
 
+button = document.getElementById('delete');
+button.addEventListener('click', tabledelete());
 
 
-
-
-
+function tabledelete() {
+  return confirm('Are you sure you want to delete?');
+  
+}
+                      
 
 
 
