@@ -74,14 +74,10 @@ function calcSlider(num) {
   }
 }
 
-button = document.getElementById('delete');
-button.addEventListener('click', tabledelete());
+document.getElementById('delete').addEventListener("click", confirm('Are you sure you want to delete?'));
 
 
-function tabledelete() {
-  return confirm('Are you sure you want to delete?');
-  
-}
+
 // href='delete.php?id=".$row['playID']      
 
 
