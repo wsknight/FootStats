@@ -80,7 +80,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <input type=button, placeholder=delete, id=delete, name=delete> </td>
+              <td> <input type='button' placeholder='delete' id='delete' name='delete'> </td>
             </tr>";
     }
 echo "</table>";
@@ -93,18 +93,9 @@ echo "</table>";
 mysqli_close($conn);
 
 ?>
-<div class="popup" id="popup">
-<p>Are you sure you want to delete : </p> 
 
-<label for="YesorNo" class="Yes"> </label>
-<input type="button" id="YesorNo" name="Yes">
-<input type="button" id="YesorNo" name="No">
-
-</div>
-  
-</body>
-
-  
 <script src="script.js"></script>
 
+</body>
+  
 </html>
