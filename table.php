@@ -36,7 +36,7 @@ $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
 
 
-//Create a Connection
+//Create a FART
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 //check connection
@@ -79,9 +79,9 @@ echo "<table>
               <td>" . $row['backfieldCalls']. "</td>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
-              <td>" . $row['playDirection']. "</td>
-              <td> <input type="button" name="Yes" palceholder="Delete" id="delete"> </td>
-            </tr>
+              <td>" . $row['playDirection']. "</td>"
+              "<td> <input type='button' name='yes' palceholder='Delete' id='delete'> </td>"
+            "</tr>
             ";
     }
 echo "</table>";
