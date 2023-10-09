@@ -80,8 +80,8 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td>" "<input type="button" name="yes" palceholder="Delete" id="delete">" "</td>"
-            "</tr>";
+              <td> <input type=button, placeholder=delete, id=delete, name=delete> </td>
+            </tr>";
     }
 echo "</table>";
   
@@ -106,5 +106,5 @@ mysqli_close($conn);
 
   
 <script src="script.js"></script>
-  <!--T  href='delete.php?id=".$row['playID']-->
+
 </html>

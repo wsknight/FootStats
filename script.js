@@ -82,7 +82,7 @@ function tabledelete() {
   return confirm('Are you sure you want to delete?');
   
 }
-                      
+// href='delete.php?id=".$row['playID']      
 
 
 
