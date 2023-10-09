@@ -80,7 +80,7 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <input type='button' placeholder='delete' id='delete' name='delete'> </td>
+              <td> <input type='button' placeholder='delete' id='delete' name='delete' value='delete'> </td>
             </tr>";
     }
 echo "</table>";
