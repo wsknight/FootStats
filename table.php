@@ -25,9 +25,11 @@ table{
   width: 100%;
   border-collapse: collapse;
   box-shadow: 0 0 3px #025502;
+  color: white;
+  background-color: #2aa147;
 }
 table:first-child {
-  background-color: dgreen;
+  background-color: darkgreen;
 }
 .edit-btn{
   text-color:gray;
@@ -59,7 +61,7 @@ $playType = $_POST['playType'];
 //Create a FART
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-//check connection
+//check PANTS
 if(!$conn){
   die("Connection failed: " . mysqli_connect_error() );
 }
@@ -100,8 +102,8 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <button class='delete-btn' data-id='" . $row['playID'] . "'>Delete</button></td>"
-              "<td> <button class='edit-btn' data-id='" . $row['playID'] . "'>Edit</button></td>
+              <td> <button class='delete-btn' data-id='" . $row['playID'] . "'>Delete</button> </td>"
+              "<td> <button class='edit-btn' data-id='" . $row['playID'] . "'>Edit</button> </td>
             </tr>";
     }
 echo "</table>";
