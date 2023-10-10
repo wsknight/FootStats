@@ -24,13 +24,13 @@ th, td {
 table{
   width: 100%;
   border-collapse: collapse;
-  background-image: 
-  box-shadow: 0 0 3px #FF0000;
+  box-shadow: 0 0 3px #025502;
 }
-.popup {
-  position: absolute;
-  visibility: show;
-  
+table:first-child {
+  background-color: dgreen;
+}
+.edit-btn{
+  text-color:gray;
 }
 .delete-btn{
     text-color: red;

@@ -74,29 +74,6 @@ function calcSlider(num) {
   }
 }
 
-button = document.getElementById('delete')
-
-button.addEventListener("click", confirm('Are you sure you want to delete?'));
-
-
-
-
-// href='delete.php?id=".$row['playID']      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //   cursor parking |||||||||||||
