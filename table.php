@@ -15,6 +15,9 @@ table{
   visibility: show;
   
 }
+  .delete-btn{
+    text-color: red;
+  }
   
 </style>
   
@@ -72,7 +75,6 @@ echo "<table>
             <th>Play Direction</th>
         </tr>";
     while($row = mysqli_fetch_assoc($result)){
-      echo "<form action='/delete.php?id=".$row['playID']" method='post'>";
       echo "<tr>
               <td>" . $row['playID'] . "</td>
               <td>" . $row['playType']. "</td>
@@ -81,11 +83,10 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <button type='submit' name='delete' value='delete'" . $row['id'] . "delete </button> </td>
+              <td> <button class='delete-btn' data-id='" . $row['playID'] . "'>Delete</button></td>
             </tr>";
     }
 echo "</table>";
-echo "</form>";
   
 }else{
   die();
@@ -93,10 +94,31 @@ echo "</form>";
 
 //Close Connection
 mysqli_close($conn);
-
+//have a form inside the table that'll head to another form with the "are you sure" button and then have that be a submit button thatll execute the delete.php script and head it back to the updated table
 ?>
 
-<script src="script.js"></script>
+<script>
+
+ //button pressed
+
+  document.addEventListener('click', function(event){
+    if (event.target.classList.contains('delete-btn')){
+      if(confirm("Are you sure you want to delete this record?")){
+        var id = event.target.getAttribute('data-id');
+        window.location.href = "delete.php?id="+id;
+      }
+    
+        }
+  });
+  
+  
+
+  
+  
+ 
+
+  
+</script>
 
 </body>
   
