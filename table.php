@@ -1,23 +1,38 @@
 <html>
   
 <head>  
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
   
 <style type="text/css">
+
+html {
+  height: 100%;
+  font-family: 'Graduate', cursive; 
+  width: 100%;
+  background-color: #6aa147;
+  
+  position: static;
+}  
+  
 th, td {
   border: 1px solid;
 }
 table{
   width: 100%;
   border-collapse: collapse;
+  background-imge: url(https://replit.com/@Wsknight05/Football-Project#img/footballfield.png);
 }
 .popup {
   position: absolute;
   visibility: show;
   
 }
-  .delete-btn{
+.delete-btn{
     text-color: red;
-  }
+}
   
 </style>
   
@@ -110,7 +125,17 @@ mysqli_close($conn);
     
         }
   });
-  
+
+
+   document.addEventListener('click', function(event){
+    if (event.target.classList.contains('edit-btn')){
+      if(prompt(" this record?")){
+        var id = event.target.getAttribute('data-id');
+        window.location.href = "edit.php?id="+id;
+      }
+    
+        }
+  });
   
 
   

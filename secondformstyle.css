@@ -62,17 +62,15 @@ html {
 }
 
 .containerItem{
-  padding-top:5px;
-  padding-bottom:10px;
-  margin: 5%;
+  margin: 1%;
 }
 
 .containerText{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  width: 80%
+  margin-top: 5%;
+  margin-bottom: 0%;
+  width: 80%;
 }
 
 .containerRadio{
