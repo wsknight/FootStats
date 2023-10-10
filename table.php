@@ -102,8 +102,8 @@ echo "<table>
               <td>" . $row['oPlay']. "</td>
               <td>" . $row['oStrength']. "</td>
               <td>" . $row['playDirection']. "</td>
-              <td> <button class='delete-btn' data-id='" . $row['playID'] . "'>Delete</button> </td>"
-              "<td> <button class='edit-btn' data-id='" . $row['playID'] . "'>Edit</button> </td>
+              <td> <button class='delete-btn' data-id='" . $row['playID'] . "'>Delete</button> </td>
+              <td> <button class='edit-btn' data-id='" . $row['playID'] . "'>Edit</button> </td>
             </tr>";
     }
 echo "</table>";
