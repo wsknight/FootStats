@@ -134,9 +134,9 @@ mysqli_close($conn);
 
    document.addEventListener('click', function(event){
     if (event.target.classList.contains('edit-btn')){
-      if(prompt(" this record?")){
+      if(confirm("Are you sure you want to edit this record?")){
         var id = event.target.getAttribute('data-id');
-        window.location.href = "edit.php?id="+id;
+        window.location.href = "editform.html?id="+id;
       }
     
         }
