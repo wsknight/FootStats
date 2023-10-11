@@ -17,23 +17,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 $id = $_GET['id'];
 
-$query1 = "UPDATE playInformation SET backfieldCalls = '$backfieldCalls' WHERE playID = '$id'";
-mysqli_query($conn,$query1);
+$update = "UPDATE playInformation SET backfieldCalls = '$backfieldCalls', hash = '$hash', oPlay = '$oPlay', oStrength = '$oStrength', playDirection = '$playDirection', playType = '$playType' WHERE playID = '$id'";
 
-$query2 = "UPDATE playInformation SET hash = '$hash' WHERE playInformation . playID = '$id'";
-mysqli_query($conn,$query2);
+$query = mysqli_query($conn , $update);
 
-$query3 = "UPDATE playInformation SET oPlay = '$oPlay' WHERE playInformation . playID = '$id'";
-mysqli_query($conn,$query3);
-
-$query4 = "UPDATE playInformation SET oStrength = '$oStrength' WHERE playInformation . playID = '$id'";
-mysqli_query($conn,$query4);
-
-$query5 = "UPDATE playInformation SET playDirection = '$playDirection' WHERE playInformation . playID = '$id'";
-mysqli_query($conn,$query5);
-
-$query6 = "UPDATE playInformation SET playType = '$playType' WHERE playInformation . playID = '$id'";
-mysqli_query($conn,$query6);
 
 
 mysqli_close($conn);
