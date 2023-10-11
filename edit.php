@@ -41,7 +41,11 @@ $query6 = "UPDATE playInformation SET playType = '$playType' WHERE playID = $id"
 
 $result6 = mysqli_query($conn,$query6);
 
-header("location:table.php");
+if($result1 && $result2 && $result3 && $result4 && $result5 && $result6) {
+    echo "Record Updated";
+} else {
+    echo "Error: " . mysqli_error($conn);
+}
 
 mysqli_close($conn);
 
