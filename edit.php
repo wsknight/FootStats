@@ -18,35 +18,23 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 $id = $_GET['id'];
 
 $query1 = "UPDATE playInformation SET backfieldCalls = '$backfieldCalls' WHERE playID = '$id'";
-
-$result1 = mysqli_query($conn,$query1);
+mysqli_query($conn,$query1);
 
 $query2 = "UPDATE playInformation SET hash = '$hash' WHERE playInformation . playID = '$id'";
-
-$result2 = mysqli_query($conn,$query2);
+mysqli_query($conn,$query2);
 
 $query3 = "UPDATE playInformation SET oPlay = '$oPlay' WHERE playInformation . playID = '$id'";
-
-$result3 = mysqli_query($conn,$query3);
+mysqli_query($conn,$query3);
 
 $query4 = "UPDATE playInformation SET oStrength = '$oStrength' WHERE playInformation . playID = '$id'";
-
-$result4 = mysqli_query($conn,$query4);
+mysqli_query($conn,$query4);
 
 $query5 = "UPDATE playInformation SET playDirection = '$playDirection' WHERE playInformation . playID = '$id'";
-
-$result5 = mysqli_query($conn,$query5);
+mysqli_query($conn,$query5);
 
 $query6 = "UPDATE playInformation SET playType = '$playType' WHERE playInformation . playID = '$id'";
+mysqli_query($conn,$query6);
 
-$result6 = mysqli_query($conn,$query6);
-
-echo "$backfieldCalls";
-echo "$hash";
-echo "$oPlay";
-echo "$oStrength";
-echo "$playDirection";
-echo "$playType";
 
 mysqli_close($conn);
 
