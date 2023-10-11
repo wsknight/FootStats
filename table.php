@@ -1,7 +1,7 @@
 <html>
   
 <head>  
-  <title>FootStats - Edit</title>
+  <title>FootStats - Table</title>
   <link rel="icon" type="image/x-icon" href="img/sliderIcon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,21 @@ table:first-child {
   text-color:gray;
 }
 .delete-btn{
-    text-color: red;
+  text-color: red;
+}
+
+.headstyle{
+  border-radius:5px;
+  text-align: center;
+  background-color:gray;
+  box-shadow: -1px 1px 5px #5e5e5e;
+  color:white;
+  letter-spacing:2px;
+  word-spacing: 5px;
+  text-shadow: 2px 2px 10px black;
+  font-family: 'Graduate', cursive;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
   
 </style>
@@ -44,6 +58,8 @@ table:first-child {
 
 <body>
 
+<h1 class="headstyle">FootStats</h1>
+  
 <?php
 
 $servername = "localhost";
@@ -58,10 +74,10 @@ $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
 
 
-//Create a FART
+//Create a connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-//check PANTS
+//check connection
 if(!$conn){
   die("Connection failed: " . mysqli_connect_error() );
 }
