@@ -4,12 +4,12 @@ $servername = "localhost";
 $username = "root";
 $password = "foot";
 $dbname = "footballApp";
-$backfieldCalls = $_POST['backfieldCalls'];
-$hash = $_POST['hash'];
-$oPlay = $_POST['oPlay'];
-$oStrength = $_POST['oStrength'];
-$playDirection = $_POST['playDirection'];
-$playType = $_POST['playType'];
+$backfieldCalls = $_POST['backfieldCallsEdited'];
+$hash = $_POST['hashEdited'];
+$oPlay = $_POST['oPlayEdited'];
+$oStrength = $_POST['oStrengthEdited'];
+$playDirection = $_POST['playDirectionEdited'];
+$playType = $_POST['playTypeEdited'];
 
 
 //Create a Connection
