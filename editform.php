@@ -48,7 +48,7 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 
 echo "<form action='editscript.php' method='POST'>";
-echo "<input name='playID' type='hidden' value='" . $id . "'>"
+echo "<input name='playID' type='hidden' value='" . $id . "'>";
 echo "<table>
             <tr>
               <th><label for='playTypeRun'>Run</label></th>
