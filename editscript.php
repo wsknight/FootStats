@@ -10,7 +10,7 @@ $oPlay = $_POST['oPlay'];
 $oStrength = $_POST['oStrength'];
 $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
-$id = $_POST['playID']
+$id = $_POST['playID'];
 
 
 //Create a Connection
