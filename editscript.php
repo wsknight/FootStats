@@ -17,7 +17,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 $id = $_GET['id'];
 
-$update = "UPDATE playInformation SET backfieldCalls = '$backfieldCalls', hash = '$hash', oPlay = '$oPlay', oStrength = '$oStrength', playDirection = '$playDirection', playType = '$playType' WHERE playID = '$id'";
+$update = "UPDATE playInformation SET backfieldCalls ='$backfieldCalls', "
 
 $query = mysqli_query($conn, $update);
 

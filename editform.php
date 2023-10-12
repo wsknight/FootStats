@@ -37,17 +37,18 @@ $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
 
 
+
 //Create a Connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 $id = $_GET['id'];
-
+$playID = $_POST[$id];
 $query = "SELECT * FROM playInformation WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 
-echo "$id"
 echo "<form action='editscript.php' method='POST'>";
+echo "<input name='playID' type='hidden' value='" . $id . "'>"
 echo "<table>
             <tr>
               <th><label for='playTypeRun'>Run</label></th>
@@ -89,10 +90,28 @@ echo "<table>
             </tr>
           </table>";
 
+echo "<table>
+            <tr>
+              <th><label for='left'>Left</label></th>
+              <th><input type='radio' id='left' value='left' name='playDirection'></th>
+            </tr>
+            <tr>
+              <th><label for='middle'>Middle</label></th>
+              <th><input type='radio' id='middle' value='middle' name='playDirection'></th>
+            </tr>
+            <tr>
+              <th><label for='right'>Right</label></th>
+              <th><input type='radio' id='right' value='right' name='playDirection'></th>
+            </tr>
+          </table>";
 
+echo "<label for='backfieldCalls'>What was the backfield call? :</label>
+          <input id='backfieldCalls' placeholder='What was the backfield call?' name='backfieldCalls'>
+          <label for='backfieldCalls'></label>";
 
-
-
+echo "<label for='oPlay'>What was the offensive play? :</label>
+          <input id='oPlay' class='inputTextStyle' placeholder='What was the offensive play?' name='oPlay'>
+          <label for='oPlay'></label>";
 
 echo "<input type='submit' value='Update'>";
 echo "</form>";
