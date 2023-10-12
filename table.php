@@ -33,6 +33,7 @@ table:first-child {
 }
 .edit-btn{
     background-image: url('img/football.png');
+    color
     background-size: cover;
     width: 100px;
     height: 100px;
