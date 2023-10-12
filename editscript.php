@@ -4,6 +4,7 @@ $servername = "localhost";
 $username = "root";
 $password = "foot";
 $dbname = "footballApp";
+
 $backfieldCalls = $_POST['backfieldCalls'];
 $hash = $_POST['hash'];
 $oPlay = $_POST['oPlay'];
@@ -20,8 +21,7 @@ $update = "UPDATE playInformation SET backfieldCalls ='$backfieldCalls', hash = 
 
 $query = mysqli_query($conn, $update);
 
-echo $update;
-
+header("Location=table.php");
 
 mysqli_close($conn);
 
