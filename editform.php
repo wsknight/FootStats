@@ -110,7 +110,7 @@ echo "<label for='backfieldCalls'>What was the backfield call? :</label>
           <label for='backfieldCalls'></label>";
 
 echo "<label for='oPlay'>What was the offensive play? :</label>
-          <input id='oPlay' class='inputTextStyle' placeholder='What was the offensive play?' name='oPlay'>
+          <input id='oPlay' placeholder='What was the offensive play?' name='oPlay'>
           <label for='oPlay'></label>";
 
 echo "<input type='submit' value='Update'>";
