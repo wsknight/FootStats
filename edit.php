@@ -22,6 +22,15 @@ $update = "UPDATE playInformation SET backfieldCalls = '$backfieldCalls', hash =
 $query = mysqli_query($conn , $update);
 
 
+//Error 
+if($query == true)) {
+  echo "New Record Created";
+  header("Location: table.php");
+}else{
+  echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+  echo $update;
+}
+
 
 mysqli_close($conn);
 
