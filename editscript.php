@@ -10,14 +10,13 @@ $oPlay = $_POST['oPlay'];
 $oStrength = $_POST['oStrength'];
 $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
+$id = $_POST['playID']
 
 
 //Create a Connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$id = $_GET['id'];
-
-$update = "UPDATE playInformation SET backfieldCalls ='$backfieldCalls', "
+$update = "UPDATE playInformation SET backfieldCalls ='$backfieldCalls', hash = '$hash', oPlay = '$oPlay', oStrength = '$oStrength', playDirection = '$playDirection', playType='$playType' WHERE playID = '$id'"
 
 $query = mysqli_query($conn, $update);
 

@@ -42,7 +42,7 @@ $playType = $_POST['playType'];
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 $id = $_GET['id'];
-$playID = $_POST[$id];
+
 $query = "SELECT * FROM playInformation WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
