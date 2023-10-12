@@ -32,12 +32,28 @@ table:first-child {
   background-color: darkgreen;
 }
 .edit-btn{
-  text-color:gray;
-}
-.delete-btn{
-  text-color: red;
-}
+    background-image: url('img/football.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+  }
 
+  .delete-btn {
+    background-image: url('img/football.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+  }
 .headstyle{
   border-radius:5px;
   text-align: center;
@@ -152,7 +168,7 @@ mysqli_close($conn);
     if (event.target.classList.contains('edit-btn')){
       if(confirm("Are you sure you want to edit this record?")){
         var id = event.target.getAttribute('data-id');
-        window.location.href = "editform.html?id="+id;
+        window.location.href = "editform.php?id="+id;
       }
     
         }

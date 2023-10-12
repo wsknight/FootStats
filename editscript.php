@@ -4,12 +4,12 @@ $servername = "localhost";
 $username = "root";
 $password = "foot";
 $dbname = "footballApp";
-$backfieldCalls = $_POST['backfieldCallsEdited'];
-$hash = $_POST['hashEdited'];
-$oPlay = $_POST['oPlayEdited'];
-$oStrength = $_POST['oStrengthEdited'];
-$playDirection = $_POST['playDirectionEdited'];
-$playType = $_POST['playTypeEdited'];
+$backfieldCalls = $_POST['backfieldCalls'];
+$hash = $_POST['hash'];
+$oPlay = $_POST['oPlay'];
+$oStrength = $_POST['oStrength'];
+$playDirection = $_POST['playDirection'];
+$playType = $_POST['playType'];
 
 
 //Create a Connection
@@ -19,14 +19,16 @@ $id = $_GET['id'];
 
 $update = "UPDATE playInformation SET backfieldCalls = '$backfieldCalls', hash = '$hash', oPlay = '$oPlay', oStrength = '$oStrength', playDirection = '$playDirection', playType = '$playType' WHERE playID = '$id'";
 
-$query = mysqli_query($conn, $update);
+//$query = mysqli_query($conn, $update);
 
 
-echo $query;
-echo $update;
-echo $echo;
+if(mysqli_query($conn, $update)) {
+  echo "New Record Created";
+  header("Location: table.php");
+}else{
+  echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+}
 
-//header("Location: table.php");
 
 
 mysqli_close($conn);
