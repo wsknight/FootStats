@@ -19,17 +19,10 @@ $id = $_GET['id'];
 
 $update = "UPDATE playInformation SET backfieldCalls = '$backfieldCalls', hash = '$hash', oPlay = '$oPlay', oStrength = '$oStrength', playDirection = '$playDirection', playType = '$playType' WHERE playID = '$id'";
 
-$query = mysqli_query($conn , $update);
+$query = mysqli_query($conn, $update);
 
 
-//Error 
-if($query == true) {
-  echo "New Record Created";
-  header("Location: table.php");
-}else{
-  echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-  echo $update;
-}
+header("Location: table.php");
 
 
 mysqli_close($conn);
