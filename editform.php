@@ -46,6 +46,7 @@ $query = "SELECT * FROM playInformation WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 
+echo "$id"
 echo "<form action='editscript.php' method='POST'>";
 echo "<table>
             <tr>
