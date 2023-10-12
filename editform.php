@@ -31,7 +31,7 @@ echo "<table>
               <th><label for='playTypePass'>Pass</label></th>
               <th><input type='radio' id='playTypePass' name='playType' value='" . $row['playtype'] . "' name='playType'></th>
             </tr>
-          </table>"
+          </table>";
 
 
 mysqli_close($conn);
