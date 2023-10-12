@@ -23,7 +23,7 @@ $query = mysqli_query($conn , $update);
 
 
 //Error 
-if($query == true)) {
+if($query == true) {
   echo "New Record Created";
   header("Location: table.php");
 }else{
