@@ -33,7 +33,7 @@ table:first-child {
 }
 .edit-btn{
     background-image: url('img/football.png');
-    font-color: white;
+    color: white;
     background-size: cover;
     width: 100px;
     height: 100px;
@@ -46,7 +46,7 @@ table:first-child {
 
   .delete-btn {
     background-image: url('img/football.png');
-    font-color: white;
+    color: white;
     background-size: cover;
     width: 100px;
     height: 100px;
