@@ -4,7 +4,7 @@
   <title>FootStats - Editing</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width" initial-scale="1">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="secondform.css" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/x-icon" href="img/sliderIcon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
