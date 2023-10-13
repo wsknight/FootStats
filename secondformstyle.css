@@ -34,6 +34,20 @@ html {
   margin-right: auto;
 }
 
+.entireDisplayEdit{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 60%;
+  width:95%;
+  border-radius:5px;
+  color: white;
+  box-shadow: -1px 1px 5px darkgreen;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .bottomContainer{
   display: flex;
   height:100%;

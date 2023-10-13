@@ -36,7 +36,7 @@ echo "<body>
   <h1 class='headstyle'>FootStats</h1>
   <h1 class='headstyle'>Editing</h1>
 
-<div class='entireDisplay'>
+<div class='entireDisplayEdit'>
 
   <div class='topContainerSecondForm' style='order:1;'>
   
