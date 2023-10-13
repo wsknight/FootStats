@@ -56,8 +56,6 @@ echo "<body>
       </table>
     </div>
 
-
-  
     <div class='containerRadio'>
       <p>Where was the hash?: </p>
       <table>
@@ -77,8 +75,6 @@ echo "<body>
     </div>
     <br>
 
-
-  
     <div class='containerRadio'>
       <p>Where was the offensive strength?: </p>
       <table>
@@ -97,8 +93,6 @@ echo "<body>
       </table>
     </div>
 
-
-    
     <div class='containerRadio'>
       <p>What direction was the play in?: </p>
       <table>
@@ -117,8 +111,6 @@ echo "<body>
       </table>
     </div>
 
-
-    
     <div class='containerText'>
       <label for='backfieldCalls'>What was the backfield call? :</label>
       <input id='backfieldCalls' class='inputTextStyle' placeholder='What was the backfield call?'
@@ -126,20 +118,11 @@ echo "<body>
       <label for='backfieldCalls'></label>
     </div>
 
-
-    
     <div class='containerText'>
-  
       <label for='oPlay'>What was the offensive play? :</label>
       <input id='oPlay' class='inputTextStyle' placeholder='What was the offensive play?' name='oPlay'>
       <label for='oPlay'></label>
     </div>
-
-
-  
-  </div>
-
-  <div class='bottomContainer' style='order:2'>
 
     <div class='containerItem'>
     
@@ -149,9 +132,7 @@ echo "<body>
     
   </div>
 
-
 </div>
-
 
 </form>
 
