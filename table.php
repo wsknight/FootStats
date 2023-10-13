@@ -42,6 +42,8 @@ table:first-child {
     outline: none;
     padding: 0;
     background-color: transparent;
+    font-size: 20px;
+  font-family: 'Graduate', cursive; 
   }
 
   .delete-btn {
@@ -80,10 +82,6 @@ table:first-child {
   
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "foot";
-$dbname = "footballApp";
 $backfieldCalls = $_POST['backfieldCalls'];
 $hash = $_POST['hash'];
 $oPlay = $_POST['oPlay'];
@@ -91,14 +89,7 @@ $oStrength = $_POST['oStrength'];
 $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
 
-
-//Create a connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-//check connection
-if(!$conn){
-  die("Connection failed: " . mysqli_connect_error() );
-}
+include 'connection.php';
 
 //SQL insert statement
 if($playType != null)
@@ -108,6 +99,7 @@ VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$
 
 mysqli_query($conn, $sql);
 } 
+
 //sql grab statement
 $sqlSelect = "SELECT * FROM playInformation";
 
@@ -148,7 +140,7 @@ echo "</table>";
 
 //Close Connection
 mysqli_close($conn);
-//have a form inside the table that'll head to another form with the "are you sure" button and then have that be a submit button thatll execute the delete.php script and head it back to the updated table
+
 ?>
 
 <script>

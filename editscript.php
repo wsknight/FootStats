@@ -1,21 +1,14 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "foot";
-$dbname = "footballApp";
-
+$id = $_POST['playID'];
 $backfieldCalls = $_POST['backfieldCalls'];
 $hash = $_POST['hash'];
 $oPlay = $_POST['oPlay'];
 $oStrength = $_POST['oStrength'];
 $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
-$id = $_POST['playID'];
 
-
-//Create a Connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+include 'connection.php';
 
 $update = "UPDATE playInformation SET backfieldCalls ='$backfieldCalls', hash = '$hash', oPlay = '$oPlay', oStrength = '$oStrength', playDirection = '$playDirection', playType='$playType' WHERE playID = '$id'";
 

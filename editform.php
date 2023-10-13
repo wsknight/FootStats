@@ -25,21 +25,13 @@
 
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "foot";
-$dbname = "footballApp";
+include 'connection.php';
 $backfieldCalls = $_POST['backfieldCalls'];
 $hash = $_POST['hash'];
 $oPlay = $_POST['oPlay'];
 $oStrength = $_POST['oStrength'];
 $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
-
-
-
-//Create a Connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 $id = $_GET['id'];
 
@@ -106,11 +98,11 @@ echo "<table>
           </table>";
 
 echo "<label for='backfieldCalls'>What was the backfield call? :</label>
-          <input id='backfieldCalls' placeholder='What was the backfield call?' name='backfieldCalls'>
+          <input id='backfieldCalls' placeholder='What was the backfield call?' class='inputTextStyle' name='backfieldCalls'>
           <label for='backfieldCalls'></label>";
 
 echo "<label for='oPlay'>What was the offensive play? :</label>
-          <input id='oPlay' placeholder='What was the offensive play?' name='oPlay'>
+          <input id='oPlay' class='inputTextStyle' placeholder='What was the offensive play?' name='oPlay'>
           <label for='oPlay'></label>";
 
 echo "<input type='submit' value='Update'>";

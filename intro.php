@@ -1,16 +1,15 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "foot";
-$dbname = "footballApp";
-$gameNum = $_POST['gameNum'];
-$teamOne = $_POST['teamOne'];
-$teamTwo = $_POST['teamTwo'];
+
+$backfieldCalls = $_POST['backfieldCalls'];
+$hash = $_POST['hash'];
+$oPlay = $_POST['oPlay'];
+$oStrength = $_POST['oStrength'];
+$playDirection = $_POST['playDirection'];
+$playType = $_POST['playType'];
 $lineOfScrim = $_POST['lineOfScrimmage'];
 $lineToGain = $_POST['lineOfScrimmage'] + 20;
 
-//Create a Connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+include 'connection.php';
 
 //check connection
 if(!$conn){
