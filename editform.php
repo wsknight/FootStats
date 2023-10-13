@@ -29,10 +29,10 @@ $id = $_GET['id'];
 $query = "SELECT * FROM playInformation WHERE id = $id";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
-
 echo "<form action='editscript.php' method='POST'>";
 echo "<input name='playID' type='hidden' value='" . $id . "'>";
 echo "<body>
+
   <h1 class='headstyle'>FootStats</h1>
   <h1 class='headstyle'>Editing</h1>
 
@@ -153,10 +153,10 @@ echo "<body>
 </div>
 
 
-</div>
+</form>
 
 </body>";
-echo "</form>";
+
 
 
 mysqli_close($conn);
