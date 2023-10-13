@@ -41,7 +41,6 @@ table:first-child {
     border: none;
     outline: none;
     padding: 0;
-    background-color: transparent;
     font-size: 20px;
     font-family: 'Graduate', cursive; 
   }
@@ -55,7 +54,6 @@ table:first-child {
     border: none;
     outline: none;
     padding: 0;
-    background-color: transparent;
     font-size: 20px;
     font-family: 'Graduate', cursive; 
   }

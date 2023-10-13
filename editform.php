@@ -11,15 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <h1 class="headstyle">FootStats</h1>
-  <h1 class="headstyle">Editing</h1>
-
-
-
-
-
-</body>
 </html>
 
 
@@ -41,7 +32,11 @@ $row = mysqli_fetch_assoc($result);
 
 echo "<form action='editscript.php' method='POST'>";
 echo "<input name='playID' type='hidden' value='" . $id . "'>";
-echo "<div class='entireDisplay'>
+echo "<body>
+  <h1 class='headstyle'>FootStats</h1>
+  <h1 class='headstyle'>Editing</h1>
+
+<div class='entireDisplay'>
 
   <div class='topContainerSecondForm' style='order:1;'>
   
@@ -158,7 +153,9 @@ echo "<div class='entireDisplay'>
 </div>
 
 
-</div>";
+</div>
+
+</body>";
 echo "</form>";
 
 
