@@ -26,7 +26,7 @@ table{
   border-collapse: collapse;
   box-shadow: 0 0 3px #025502;
   color: white;
-  background-color: #2aa147;
+  background-color: #0aa147;
 }
 table:first-child {
   background-color: darkgreen;
@@ -43,6 +43,7 @@ table:first-child {
     padding: 0;
     font-size: 20px;
     font-family: 'Graduate', cursive; 
+    background-color: #0aa147;
   }
 
   .delete-btn {
@@ -56,6 +57,7 @@ table:first-child {
     padding: 0;
     font-size: 20px;
     font-family: 'Graduate', cursive; 
+    background-color: #0aa147;
   }
 .headstyle{
   border-radius:5px;
@@ -117,6 +119,8 @@ echo "<table>
             <th>Offensive Play</th>
             <th>Offensive Strength</th>
             <th>Play Direction</th>
+            <th>DELETE</th>
+            <th>UPDATE</th>
         </tr>";
     while($row = mysqli_fetch_assoc($result)){
       echo "<tr>
