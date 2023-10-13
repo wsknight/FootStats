@@ -41,71 +41,124 @@ $row = mysqli_fetch_assoc($result);
 
 echo "<form action='editscript.php' method='POST'>";
 echo "<input name='playID' type='hidden' value='" . $id . "'>";
-echo "<table>
-            <tr>
-              <th><label for='playTypeRun'>Run</label></th>
-              <th><input type='radio' id='playTypeRun' name='playType' value='Run' name='playType'></th>
-            </tr>
-            <tr>
-              <th><label for='playTypePass'>Pass</label></th>
-              <th><input type='radio' id='playTypePass' name='playType' value='Pass' name='playType'></th>
-            </tr>
-          </table>";
+echo "<div class='entireDisplay'>
 
-echo "<table>
-            <tr>
-              <th><label for='left'>Left</label></th>
-              <th><input type='radio' id='left' value='left' name='hash'></th>
-            </tr>
-            <tr>
-              <th><label for='middle'>Middle</label></th>
-              <th><input type='radio' id='middle' value='middle' name='hash'></th>
-            </tr>
-            <tr>
-              <th><label for='middle'>Right</label></th>
-              <th><input type='radio' id='right' value='right' name='hash'></th>
-            </tr>
-          </table>";
+  <div class='topContainerSecondForm' style='order:1;'>
+  
+    <div class='containerRadio'>
+      <p>Was the play a Run or Pass?:</p>
+      <table>
+        <tr>
+          <th><label for='playTypeRun'>Run</label></th>
+          <th><input type='radio' id='playTypeRun' class='inputTextStyle' name='playType' value='Run'
+              name='playType'></th>
+        </tr>
+        <tr>
+          <th><label for='playTypePass'>Pass</label></th>
+          <th><input type='radio' id='playTypePass' class='inputTextStyle' name='playType' value='Pass'
+              name='playType'></th>
+        </tr>
+      </table>
+    </div>
 
-echo "<table>
-            <tr>
-              <th><label for='left'>Strong Left</label></th>
-              <th><input type='radio' id='left' value='left' name='oStrength'></th>
-            </tr>
-            <tr>
-              <th><label for='middle'>Even Middle</label></th>
-              <th><input type='radio' id='middle' value='middle' name='oStrength'></th>
-            </tr>
-            <tr>
-              <th><label for='right'>Strong Right</label></th>
-              <th><input type='radio' id='right' value='right' name='oStrength'></th>
-            </tr>
-          </table>";
 
-echo "<table>
-            <tr>
-              <th><label for='left'>Left</label></th>
-              <th><input type='radio' id='left' value='left' name='playDirection'></th>
-            </tr>
-            <tr>
-              <th><label for='middle'>Middle</label></th>
-              <th><input type='radio' id='middle' value='middle' name='playDirection'></th>
-            </tr>
-            <tr>
-              <th><label for='right'>Right</label></th>
-              <th><input type='radio' id='right' value='right' name='playDirection'></th>
-            </tr>
-          </table>";
+  
+    <div class='containerRadio'>
+      <p>Where was the hash?: </p>
+      <table>
+        <tr>
+          <th><label for='left'>Left</label></th>
+          <th><input type='radio' id='left' value='left' name='hash'></th>
+        </tr>
+        <tr>
+          <th><label for='middle'>Middle</label></th>
+          <th><input type='radio' id='middle' value='middle' name='hash'></th>
+        </tr>
+        <tr>
+          <th><label for='middle'>Right</label></th>
+          <th><input type='radio' id='right' value='right' name='hash'></th>
+        </tr>
+      </table>
+    </div>
+    <br>
 
-echo "<label for='backfieldCalls'>What was the backfield call? :</label>
-          <input id='backfieldCalls' placeholder='What was the backfield call?' class='inputTextStyle' name='backfieldCalls'>
-          <label for='backfieldCalls'></label>";
 
-echo "<label for='oPlay'>What was the offensive play? :</label>
-          <input id='oPlay' class='inputTextStyle' placeholder='What was the offensive play?' name='oPlay'>
-          <label for='oPlay'></label>";
+  
+    <div class='containerRadio'>
+      <p>Where was the offensive strength?: </p>
+      <table>
+        <tr>
+          <th><label for='left'>Strong Left</label></th>
+          <th><input type='radio' id='left' value='left' name='oStrength'></th>
+        </tr>
+        <tr>
+          <th><label for='middle'>Even Middle</label></th>
+          <th><input type='radio' id='middle' value='middle' name='oStrength'></th>
+        </tr>
+        <tr>
+          <th><label for='right'>Strong Right</label></th>
+          <th><input type='radio' id='right' value='right' name='oStrength'></th>
+        </tr>
+      </table>
+    </div>
 
-echo "<input type='submit' value='Update'>";
+
+    
+    <div class='containerRadio'>
+      <p>What direction was the play in?: </p>
+      <table>
+        <tr>
+          <th><label for='left'>Left</label></th>
+          <th><input type='radio' id='left' value='left' name='playDirection'></th>
+        </tr>
+        <tr>
+          <th><label for='middle'>Middle</label></th>
+          <th><input type='radio' id='middle' value='middle' name='playDirection'></th>
+        </tr>
+        <tr>
+          <th><label for='right'>Right</label></th>
+          <th><input type='radio' id='right' value='right' name='playDirection'></th>
+        </tr>
+      </table>
+    </div>
+
+
+    
+    <div class='containerText'>
+      <label for='backfieldCalls'>What was the backfield call? :</label>
+      <input id='backfieldCalls' class='inputTextStyle' placeholder='What was the backfield call?'
+        name='backfieldCalls'>
+      <label for='backfieldCalls'></label>
+    </div>
+
+
+    
+    <div class='containerText'>
+  
+      <label for='oPlay'>What was the offensive play? :</label>
+      <input id='oPlay' class='inputTextStyle' placeholder='What was the offensive play?' name='oPlay'>
+      <label for='oPlay'></label>
+    </div>
+
+
+  
+  </div>
+
+  <div class='bottomContainer' style='order:2'>
+
+    <div class='containerItem'>
+    
+      <input type='submit' value='Submit' class='inputTextStyle'>
+
+    </div>
+    
+  </div>
+
+
+</div>
+
+
+</div>"
 echo "</form>";
 
 
