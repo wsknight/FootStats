@@ -158,7 +158,7 @@ echo "<div class='entireDisplay'>
 </div>
 
 
-</div>"
+</div>";
 echo "</form>";
 
 

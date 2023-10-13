@@ -31,6 +31,7 @@ table{
 table:first-child {
   background-color: darkgreen;
 }
+
 .edit-btn{
     background-image: url('img/football.png');
     color: white;
@@ -43,7 +44,7 @@ table:first-child {
     padding: 0;
     background-color: transparent;
     font-size: 20px;
-  font-family: 'Graduate', cursive; 
+    font-family: 'Graduate', cursive; 
   }
 
   .delete-btn {
@@ -57,6 +58,8 @@ table:first-child {
     outline: none;
     padding: 0;
     background-color: transparent;
+    font-size: 20px;
+    font-family: 'Graduate', cursive; 
   }
 .headstyle{
   border-radius:5px;
