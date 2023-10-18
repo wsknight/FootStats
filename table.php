@@ -84,14 +84,14 @@ table:first-child {
   
 <?php
 
+include 'connection.php';
+
 $backfieldCalls = $_POST['backfieldCalls'];
 $hash = $_POST['hash'];
 $oPlay = $_POST['oPlay'];
 $oStrength = $_POST['oStrength'];
 $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
-
-include 'connection.php';
 
 //SQL insert statement
 if($playType != null)
@@ -106,9 +106,6 @@ mysqli_query($conn, $sql);
 $sqlSelect = "SELECT * FROM playInformation";
 
 $result = mysqli_query($conn, $sqlSelect);
-
-
-
 
 if(mysqli_num_rows($result)>0){
 echo "<table>

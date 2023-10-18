@@ -1,5 +1,7 @@
 <?php
 
+include 'connection.php';
+
 $backfieldCalls = $_POST['backfieldCalls'];
 $hash = $_POST['hash'];
 $oPlay = $_POST['oPlay'];
@@ -7,9 +9,7 @@ $oStrength = $_POST['oStrength'];
 $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
 $lineOfScrim = $_POST['lineOfScrimmage'];
-$lineToGain = $_POST['lineOfScrimmage'] + 20;
-
-include 'connection.php';
+$lineToGain = $_POST['lineOfScrimmage'] + 10;
 
 //check connection
 if(!$conn){
