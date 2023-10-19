@@ -9,13 +9,7 @@ $oStrength = $_POST['oStrength'];
 $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
 $lineOfScrim = $_POST['lineOfScrimmage'];
-$lineToGain = $_POST['lineOfScrimmage'];
-
-if($lineOfScrim > 0){
-  $lineToGain = $lineToGain -10;
-}else{
-  $lineToGain = $lineToGain + 10;
-}
+$lineToGain = $_POST['lineOfScrimmage'] + 10;
 
 //SQL Statement
 $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
