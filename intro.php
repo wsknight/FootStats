@@ -21,7 +21,7 @@ mysqli_query($conn, $sql);
 $sql2 = "INSERT INTO fieldInformation (gainOrLoss, lineOfScrim, lineToGain)
 VALUES (0, $lineOfScrim, $lineToGain)";
 
-mysqli_query($conn, $sql2)
+mysqli_query($conn, $sql2);
 
 header("Location: secondform.html?lineToGain=$lineToGain");
 
