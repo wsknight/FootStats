@@ -29,6 +29,8 @@ $playType = $_POST['playType'];
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$playDirection')";
 
+mysqli_query($conn, $sql)
+
 $sqlSelect = "SELECT * FROM playInformation";
 
 $result = mysqli_query($conn, $sqlSelect);
