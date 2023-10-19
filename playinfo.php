@@ -14,7 +14,7 @@ VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$
 
 mysqli_query($conn, $sql);
 
-header("Location: table.php")
+header("Location: table.php");
 
 mysqli_close($conn);
 
