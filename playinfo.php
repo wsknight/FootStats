@@ -14,14 +14,6 @@ VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$
 
 $insert = mysqli_query($conn, $sql);
 
-$lineToGain = $_POST['lineToGain'];
-$newYardLine = $_POST['yardline'];
-
-$sql2 = "INSERT INTO fieldInformation (lineToGain, gainOrLoss, down, lineOfScrim)
-VALUES ($lineToGain , $newYardLine, 2, 0)";
-
-$insert2 = mysqli_query($conn, $sql2);
-
 header("Location: /table.php");
 
 mysqli_close($conn);
