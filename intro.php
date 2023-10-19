@@ -22,7 +22,6 @@ if($lineOfScrim > 0){
   $lineToGain = $lineOfScrim + 10;
 }
 
-
 //SQL Statement
 $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
 VALUES ($gameNum, '$teamOne', '$teamTwo', 'K')";
@@ -35,7 +34,7 @@ VALUES (0, $lineOfScrim, $lineToGain, 1)";
 
 mysqli_query($conn, $sql2);
 
-header("Location: secondform.html");
+header("Location: secondform.html?lineToGain = $lineToGain");
 
 //Close Connection
 mysqli_close($conn);
