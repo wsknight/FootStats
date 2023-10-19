@@ -15,7 +15,7 @@ $lineToGain = $_POST['lineOfScrimmage'] + 10;
 $sql = "INSERT INTO games (gameNum, team1, team2, ODK)
 VALUES ($gameNum, '$teamOne', '$teamTwo', 'K')";
 
-mysqli_query($conn, $sql)
+mysqli_query($conn, $sql);
 
 //SQL Statement
 $sql2 = "INSERT INTO fieldInformation (gainOrLoss, lineOfScrim, lineToGain)
