@@ -2,12 +2,9 @@
 
 include 'connection.php';
 
-$backfieldCalls = $_POST['backfieldCalls'];
-$hash = $_POST['hash'];
-$oPlay = $_POST['oPlay'];
-$oStrength = $_POST['oStrength'];
-$playDirection = $_POST['playDirection'];
-$playType = $_POST['playType'];
+$gameNum = $_POST['gameNum'];
+$teamOne = $_POST['teamOne'];
+$teamTwo = $_POST['teamTwo'];
 $lineOfScrim = $_POST['lineOfScrimmage'];
 $lineToGain = $_POST['lineOfScrimmage'] + 10;
 

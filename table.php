@@ -60,12 +60,9 @@ echo "<table>
             </tr>";
     }
 echo "</table>";
-  
-}else{
-  die();
 }
 
-//Close Connection
+
 mysqli_close($conn);
 
 ?>
