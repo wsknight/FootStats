@@ -17,6 +17,8 @@
   
 <?php
 
+include '/connection.php';
+  
 //sql grab statement
 $sqlSelect = "SELECT * FROM playInformation";
 
