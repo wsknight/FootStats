@@ -12,9 +12,9 @@ $playType = $_POST['playType'];
 $sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$playDirection')";
 
-mysqli_query($conn, $sql);
+$insert = mysqli_query($conn, $sql);
 
-header("Location: table.php");
+header("Location: /table.php");
 
 mysqli_close($conn);
 
