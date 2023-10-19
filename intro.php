@@ -15,8 +15,8 @@ VALUES ($gameNum, '$teamOne', '$teamTwo', 'K')";
 mysqli_query($conn, $sql);
 
 //SQL Statement
-$sql2 = "INSERT INTO fieldInformation (gainOrLoss, lineOfScrim, lineToGain)
-VALUES (0, $lineOfScrim, $lineToGain)";
+$sql2 = "INSERT INTO fieldInformation (gainOrLoss, lineOfScrim, lineToGain, down)
+VALUES (0, $lineOfScrim, $lineToGain, 1)";
 
 mysqli_query($conn, $sql2);
 
