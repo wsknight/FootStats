@@ -12,11 +12,10 @@ $playDirection = $_POST['playDirection'];
 $playType = $_POST['playType'];
 
 
-
-$sqlPlayInfo = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
+$sql = "INSERT INTO playInformation (playType, hash, backfieldCalls, oPlay, oStrength, playDirection)
 VALUES ('$playType' , '$hash' , '$backfieldCalls' , '$oPlay' , '$oStrength' , '$playDirection')";
   
-mysqli_query($conn, $sqlPlayInfo);
+mysqli_query($conn, $sql);
   
 
 //FOR FIELDINFORMATION TABLE

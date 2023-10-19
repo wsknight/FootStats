@@ -9,7 +9,7 @@ $result=mysqli_query($conn,$sql);
 
 if($result)
 {
-  header("location:table.php");
+  header("location: /table.php");
 }
 mysqli_close($conn);
 ?>

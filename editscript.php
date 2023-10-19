@@ -14,7 +14,7 @@ $update = "UPDATE playInformation SET backfieldCalls ='$backfieldCalls', hash = 
 
 $query = mysqli_query($conn, $update);
 
-header("Location: table.php");
+header("Location: /table.php");
 
 mysqli_close($conn);
 
