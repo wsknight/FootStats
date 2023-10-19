@@ -20,7 +20,7 @@ VALUES (0, $lineOfScrim, $lineToGain, 1)";
 
 mysqli_query($conn, $sql2);
 
-header("Location: secondform.html?lineToGain=$lineToGain");
+header("Location: secondform.html");
 
 //Close Connection
 mysqli_close($conn);
