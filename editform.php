@@ -18,18 +18,8 @@
 
 include 'connection.php';
 
-$backfieldCalls = $_POST['backfieldCalls'];
-$hash = $_POST['hash'];
-$oPlay = $_POST['oPlay'];
-$oStrength = $_POST['oStrength'];
-$playDirection = $_POST['playDirection'];
-$playType = $_POST['playType'];
-
 $id = $_GET['id'];
 
-$query = "SELECT * FROM playInformation WHERE id = $id";
-$result = mysqli_query($conn, $query);
-$row = mysqli_fetch_assoc($result);
 echo "<form action='editscript.php' method='POST'>";
 echo "<input name='playID' type='hidden' value='" . $id . "'>";
 echo "<body>
