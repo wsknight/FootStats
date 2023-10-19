@@ -17,7 +17,7 @@
 <body>
   <h1 class="headstyle">FootStats</h1>
 
-  <form action="/table.php" method="post">
+  <form action="/playInfo.php" method="post">
     <div class="entireDisplay">
       <div class="topContainerSecondForm" style="order:1;">
 
@@ -103,14 +103,24 @@
           <input id="oPlay" class="inputTextStyle" placeholder="What was the offensive play?" name="oPlay">
           <label for="oPlay"></label>
         </div>
+        <div class="bottomContainer" style="order:2">
+              <h4 id="scenarioText">Please drag the slider to the location of the yardline after the play:</h4>
+
+              <input type="range" id="slider" class="slider" min="-50" max="50" name="yardline">
+
+              <img src="img/footballfield.png" alt="footballfield" class="footballField">
+
+              <h2><span id="valueNum"></span></h2>
+        </div>
       </div>
 
-      <div class="bottomContainer" style="order:2">
+      <div class="bottomContainer" style="order:3">
 
         <div class="containerItem">
           <input type="submit" value="Submit" class="inputTextStyle">
 
         </div>
+        
       </div>
 
 
