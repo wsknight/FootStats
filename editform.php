@@ -54,6 +54,11 @@ echo "<body>
           <th><input type='radio' id='playTypePass' class='inputTextStyle' name='playType' value='Pass'
               name='playType'></th>
         </tr>
+        <tr>
+          <th><label for='playTypeRun'>Kick</label></th>
+          <th><input type='radio' id='playTypeRun' class='inputTextStyle' name='playType' value='Kick'
+              name='playType'></th>
+        </tr>
       </table>
     </div>
 

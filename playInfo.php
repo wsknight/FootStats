@@ -21,7 +21,7 @@ mysqli_query($conn, $sqlPlayInfo);
 
 //FOR FIELDINFORMATION TABLE
 
-header("Location: table.php")
+header("Location: table.php");
 
 mysqli_close($conn);
 ?>
