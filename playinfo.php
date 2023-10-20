@@ -20,6 +20,7 @@ $gainOrLoss = $_POST['yardline'];
 $sql2 = "INSERT INTO fieldInformation (gainOrLoss, lineOfScrim, lineToGain, down)
 VALUES ($gainOrLoss, 0, $lineToGain, 1)";
 
+$insert2 = mysqli_query($conn, $sql2);
 
 header("Location: /table.php");
 
