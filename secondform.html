@@ -139,7 +139,19 @@
   </form>
 
   <script src="script.js"></script>
+<script>
 
+  // Sending linetogain over script
+  const querySearch = window.location.search;
+  const urlParams = new URLSearchParams(querySearch);
+  var lineToGain = urlParams.get('lineToGain');
+  function lineToGain(){
+    return lineToGain;
+  }
+  console.log(lineToGain());
+  document.getElementById('lineToGain').value = lineToGain();
+  
+</script>
 </body>
 
 </html>
