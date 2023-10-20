@@ -18,10 +18,9 @@
   <h1 class="headstyle">FootStats</h1>
 
   <form action="/playinfo.php" method="post">
-    <input type="hidden" id="lineToGain" name="lineToGain">
     <div class="entireDisplay">
       <div class="topContainerSecondForm" style="order:1;">
-
+        <input type="hidden" id="lineToGain" name="lineToGain" value="0">
         <!-- playType-->
         <div class="containerRadio">
           <p>Was the play a Run, Pass, Or Kick?:</p>
@@ -112,7 +111,7 @@
         <div class="bottomContainer" style="order:2">
               <h4 id="scenarioText">Please drag the slider to the location of the yardline after the play:</h4>
 
-              <input type="range" id="slider" class="slider" min="-50" max="50" name="yardline">
+              <input type="range" id="yardline" class="slider" min="-50" max="50" name="yardline">
 
               <img src="img/footballfield.png" alt="footballfield" class="footballField">
 
@@ -145,11 +144,11 @@
   const querySearch = window.location.search;
   const urlParams = new URLSearchParams(querySearch);
   var lineToGain = urlParams.get('lineToGain');
-  function lineToGain(){
+  function lineToGainFunction(){
     return lineToGain;
   }
-  console.log(lineToGain());
-  document.getElementById('lineToGain').value = lineToGain();
+  console.log(lineToGainFunction());
+  document.getElementById('lineToGain').value = lineToGainFunction();
   
 </script>
 </body>

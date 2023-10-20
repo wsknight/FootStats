@@ -4,6 +4,7 @@ html {
   width: 100%;
   background-color: #2aa147;
   position: static;
+  text-shadow: 4px 2px 5px black;
 }  
 
 .headstyle{
