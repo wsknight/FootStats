@@ -80,3 +80,11 @@ function calcSlider(num) {
 //   ------------------------------
 //      M            |||||||||||||
 //      L 
+
+
+// Sending linetogain over script
+const querySearch = window.location.search;
+const urlParams = new URLSearchParams(querySearch);
+const lineToGain = urlParams.get('lineToGain');
+console.log(lineToGain);
+document.getElementById('lineToGain').value = lineToGain;

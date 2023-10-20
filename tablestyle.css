@@ -22,7 +22,7 @@ table:first-child {
   background-color: darkgreen;
 }
 
-.edit-btn{
+.edit-btn, .delete-btn{
     color: white;
     background-size: cover;
     width: 100px;
@@ -36,19 +36,6 @@ table:first-child {
     background-color: #0aa147;
   }
 
-  .delete-btn {
-    color: white;
-    background-size: cover;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 0;
-    font-size: 20px;
-    font-family: 'Graduate', cursive; 
-    background-color: #0aa147;
-  }
 .headstyle{
   border-radius:5px;
   text-align: center;
