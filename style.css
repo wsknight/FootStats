@@ -31,6 +31,8 @@ html {
   color: white;
   box-shadow: -1px 1px 5px darkgreen;
   position: static;
+  margin-left: auto;
+  margin-right: auto;
 }
 .topContainer{
   display: flex;
@@ -44,6 +46,32 @@ html {
   padding-top:5%;
   margin-bottom:0%;
   padding-bottom:5%;
+}
+.topContainerSecondForm{
+  display: flex;
+  height:100%;
+  width:100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top:5%;
+  margin-bottom:0%;
+  padding-bottom:5%;
+}
+
+.entireDisplayEdit{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 60%;
+  width:95%;
+  border-radius:5px;
+  color: white;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bottomContainer{
   display: flex;
