@@ -7,6 +7,14 @@ slider.oninput = function() {
   sliderOutput.innerHTML = calcSliderKick(this.value);
 }
 
+var sliderTwo = document.getElementById("sliderTwo");
+var sliderOutputTwo = document.getElementById("valueNumTwo");
+sliderOutputTwo.innerHTML = calcSliderKick(sliderTwo.value);
+sliderTwo.oninput = function() {
+  sliderOutputTwo.innerHTML = calcSliderKick(this.value);
+}
+
+
 getDate();
 
 
