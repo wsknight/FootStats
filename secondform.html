@@ -20,7 +20,6 @@
   <form action="/playinfo.php" method="post">
     <div class="entireDisplay">
       <div class="topContainerSecondForm" style="order:1;">
-        <input type="hidden" id="lineToGain" name="lineToGain" value="0">
         <!-- playType-->
         <div class="containerRadio">
           <p>Was the play a Run, Pass, Or Kick?:</p>
@@ -138,15 +137,7 @@
   </form>
 
   <script src="script.js"></script>
-<script>
 
-  // Sending linetogain over script
-  let params = (new URL(document.location)).searchParams;
-  let lineToGain = params.get("lineToGain");
-  console.log(lineToGain);
-  document.getElementById('lineToGain').value = lineToGain;
-  
-</script>
 </body>
 
 </html>
