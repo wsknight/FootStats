@@ -21,11 +21,6 @@ function getDate() {
 
 
 
-function disableFields(name) //Function to make the fields of input readonly. name var is ID of Div 
-{
-  var fields = document.getElementById(name).getElementsByTagName('input');
-
-}
 
 
 function calcSliderKick(num) {
